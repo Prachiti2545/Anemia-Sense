@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+        background-image: url('https://cdn.pixabay.com/photo/2024/05/27/12/20/red-blood-cell-8791098_1280.jpg');
+
+       }
+       .pp{
+        max-width: 500px;
+        margin: auto;
+        background:lavenderblush;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.1);
+       }
+       h2{
+        color:black;
+        text-align: center;
+        text-decoration :solid;
+        background-color:greenyellow ;
+       }
+       button{
+        color: blue;
+        font-weight: bold;           
+        font-size: 18px;             
+        padding: 12px;                      
+        border-radius: 6px;          
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <div class="pp">
+    <h2>Result of Test</h2>
+
+        <p><b>Gender:</b> {{ Gender }} </p>
+        <p><b>Hemoglobin:</b> {{ Hemoglobin }} </p>
+        <p><b>MCH:</b> {{ MCH }} </p>
+        <p><b>MCHC:</b> {{ MCHC }} </p>
+        <p><b>MCV:</b> {{ MCV }} </p>
+
+        <h3>Result :  {{ result }}</h3>
+
+        <form action="{{ url_for('index') }}" method="GET">
+            <button type="submit">Check Again</button>
+        </form>
+    </div>
+</body>
+</html>

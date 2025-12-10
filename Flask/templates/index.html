@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      background-image: url('https://cdn.pixabay.com/photo/2024/05/27/12/20/red-blood-cell-8791098_1280.jpg');
+      font-family: 'Georgia','Segoe UI';
+      margin: 0;
+      padding: 20px;
+    }
+    header{
+      background-color: #f7f9fc;
+    }
+    h1 {
+      font-family: Georgia;
+      font-weight: bold;
+      color:black;
+      text-align: center;
+      text-decoration: underline;
+    }
+    h4{
+      background-color: antiquewhite;
+    }
+    footer{
+      color:red;
+      background-color: beige;
+    }
+    label{
+      background-color: antiquewhite;
+    }
+    button{
+      color:blue;
+      font-weight: bold;           
+      font-size: 18px;             
+      padding: 12px;         
+      border: none;             
+      border-radius: 6px;          
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+     <h1>Anemia Disease Predictor</h1>
+    </header>
+       
+          <form action="{{ url_for('predict') }}" method="POST">
+
+          <label><b> Please fill up the following details. </b></label><br><br>
+          <label><b> Note:Enter 1 for male and 0 for female. </b></label><br><br>
+
+          <label> Enter Gender:</label>
+          <input type="number" step="any" name="Gender" required>
+          <br><br>
+
+          <label> Enter Hemoglobin (g/dL):</label>
+          <input type="number" step="any" name="Hemoglobin" required>
+          <br><br>
+
+          <label> Enter MCH (pg):</label>
+          <input type="number" step="any" name="MCH" required>
+          <br><br>
+
+          <label> Enter MCHC (g/dL):</label>
+          <input type="number" step="any" name="MCHC" required>
+          <br><br>
+
+          <label> Enter MCV (fL):</label>
+          <input type="number" step="any" name="MCV" required> 
+          <br><br>       
+
+          <button type="submit">Submit</button>
+        </form>
+        
+      <footer>
+        <h4>Contact Us:</h4>
+          <p>The Premium Care Medical Lab<br>
+          Panvel,Navi Mumbai,Maharashtra<br>
+          Phone: +91 9597884127<br>
+          Email: thepremiumcare@gmail.com</p>
+      </footer>
+</body>
+</html>
